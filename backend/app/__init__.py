@@ -67,6 +67,10 @@ def create_app(config_class=Config):
     from app.routes import api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
 
+    @app.route('/', methods=['GET'])
+    def root_info():
+        return {'message': 'Crop Market API Backend is active', 'status': 'online', 'health': '/health', 'api': '/api/crops'}
+
     @app.route('/health', methods=['GET'])
     def health_check():
         return {'status': 'healthy', 'db': app.config['SQLALCHEMY_DATABASE_URI']}
