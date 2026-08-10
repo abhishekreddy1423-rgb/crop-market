@@ -19,7 +19,7 @@ services:
   # ----------------------------------------------------
   # Frontend Web Service (React Vite Static Site)
   # ----------------------------------------------------
-  - type: static_site
+  - type: web
     name: crop-market-frontend
     runtime: static
     region: singapore
