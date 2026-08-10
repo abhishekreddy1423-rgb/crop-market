@@ -4,7 +4,7 @@ services:
   # ----------------------------------------------------
   - type: web
     name: crop-market-backend
-    env: python
+    runtime: python
     region: singapore
     plan: free
     rootDir: backend
@@ -19,9 +19,9 @@ services:
   # ----------------------------------------------------
   # Frontend Web Service (React Vite Static Site)
   # ----------------------------------------------------
-  - type: web
+  - type: static_site
     name: crop-market-frontend
-    env: static
+    runtime: static
     region: singapore
     plan: free
     rootDir: frontend
